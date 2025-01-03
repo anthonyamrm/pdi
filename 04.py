@@ -19,10 +19,12 @@ def aplicacao_elem_estruturante(image, elementro_estruturante, center, operacao)
     return result
 
 def dilatacao(image, elementro_estruturante, center):
-    return aplicacao_elem_estruturante(image, elementro_estruturante, center, operacao="dilatacao")
+    dilatacao = aplicacao_elem_estruturante(image, elementro_estruturante, center, operacao="dilatacao")
+    return dilatacao
 
 def erosao(image, elementro_estruturante, center):
-    return aplicacao_elem_estruturante(image, elementro_estruturante, center, operacao="erosao")
+    erosao = aplicacao_elem_estruturante(image, elementro_estruturante, center, operacao="erosao")
+    return erosao
 
 def abertura(image, elementro_estruturante, center):
     ero = erosao(image, elementro_estruturante, center)
