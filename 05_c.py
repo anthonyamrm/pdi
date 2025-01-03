@@ -35,25 +35,25 @@ objetos_amarelos = (red > 150) & (green > 150) & (blue < 100)
 
 objetos_verdes = (red < 100) & (green > 150) & (blue < 100)
 
-filled_blue = preencher_buracos(objetos_azuis)
-filled_yellow = preencher_buracos(objetos_amarelos)
-filled_green = preencher_buracos(objetos_verdes)
+azul_preenchido = preencher_buracos(objetos_azuis)
+amarelo_preenchido = preencher_buracos(objetos_amarelos)
+verde_Preenchido = preencher_buracos(objetos_verdes)
 
 verm = np.copy(red)
 verd = np.copy(green)
 azu = np.copy(blue)
 
-verm[filled_blue] = 0
-verd[filled_blue] = 0
-azu[filled_blue] = 255  
+verm[azul_preenchido] = 0
+verd[azul_preenchido] = 0
+azu[azul_preenchido] = 255  
 
-verm[filled_yellow] = 255 
-verd[filled_yellow] = 255
-azu[filled_yellow] = 0
+verm[amarelo_preenchido] = 255 
+verd[amarelo_preenchido] = 255
+azu[amarelo_preenchido] = 0
 
-verm[filled_green] = 0
-verd[filled_green] = 255  
-azu[filled_green] = 0
+verm[verde_Preenchido] = 0
+verd[verde_Preenchido] = 255  
+azu[verde_Preenchido] = 0
 
 imagem_final = np.stack([verm, verd, azu], axis=-1)
 
